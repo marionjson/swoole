@@ -23,9 +23,7 @@ abstract class BaseSwooleHttp extends BaseSwoole
     public function __registrationBehaviors()
     {
         return array(
-            "open" => "onOpen",
-            "message" => "onMessage",
-            "close" => "onClose",
+            "request" => "onRequest",
         );
     }
 
@@ -34,11 +32,7 @@ abstract class BaseSwooleHttp extends BaseSwoole
         parent::__construct(get_class());
     }
 
-    abstract public function onOpen(\Swoole\WebSocket\Server $server, \Swoole\Http\Request $request);
-
-    abstract public function onMessage(\Swoole\Websocket\Server $server, \Swoole\Websocket\Frame $frame);
-
-    abstract public function onClose(\Swoole\Websocket\Server $server, $fd);
+    abstract public function onRequest(\Swoole\Http\Request $request, \Swoole\Http\Response $response);
 
     /***
      * 配置

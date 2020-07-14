@@ -15,16 +15,16 @@ use swoole\base\impl\BaseSwooleSocket;
 class DemoWebSocketService extends BaseSwooleSocket
 {
 
-//    public function __setting(): array
-//    {
-//        // TODO: Implement __setting() method.
-//        return array(
-//            //    "reactor_num"=>4, //设置启动的 Reactor 线程数
-//            //    "worker_num"=>4, //设置启动的 worker_num 进程数
-//            "enable_static_handler" => true,
-//            "document_root" => "/data/www/swoole_test/websocket/html"
-//        );
-//    }
+    public function __setting(): array
+    {
+        // TODO: Implement __setting() method.
+        return array(
+            //    "reactor_num"=>4, //设置启动的 Reactor 线程数
+            //    "worker_num"=>4, //设置启动的 worker_num 进程数
+            "enable_static_handler" => true,
+            "document_root"=>"/media/sf_swoole/swoole_test/swoole/html"
+        );
+    }
 
     public function onOpen(\Swoole\WebSocket\Server $server, \Swoole\Http\Request $request)
     {
