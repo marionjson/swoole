@@ -1,0 +1,19 @@
+{
+    "name": "marionjson/swoole",
+    "description": "composer-self package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zhangmingyong",
+            "email": "zhangmingyong@guangyv.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "files": ["src/autoload.php"]
+    }
+}

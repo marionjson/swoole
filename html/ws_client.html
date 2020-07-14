@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>swoole-ws测试</h1>
+<script>
+    var wsUrl = "ws://192.168.56.101:8812";
+    var webSocket = new WebSocket(wsUrl);
+    webSocket.onopen  = function (evt) {
+        webSocket.send("hello test");
+        console.log("connect-swoole-success");
+    }
+
+    webSocket.onmessage = function (evt) {
+        console.log("ws-server-return-data:"+evt.data);
+    }
+
+    webSocket.onclose = function (evt) {
+        console.log("close");
+    }
+
+    webSocket.onerror = function (evt,e) {
+        console.log("error"+e.data);
+    }
+
+
+</script>
+
+</body>
+</html>
