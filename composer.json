@@ -9,9 +9,8 @@
             "email": "zhangmingyong@guangyv.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-        "php": ">=7.1"
+        "php": ">=5.4"
     },
     "autoload": {
         "files": ["src/autoload.php"]
